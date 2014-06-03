@@ -48,7 +48,7 @@ action = function(host, port)
 	end
 
 	-- Execute the shell command wkhtmltoimage-i386 <url> <filename>
-	local cmd = "wkhtmltoimage-i386 -n " .. prefix .. "://" .. host.ip .. ":" .. port.number .. " " .. filename .. " 2> /dev/null   >/dev/null"
+	local cmd = "wkhtmltoimage -n " .. prefix .. "://" .. host.ip .. ":" .. port.number .. " " .. filename .. " 2> /dev/null   >/dev/null"
 	
 	local ret = os.execute(cmd)
 
